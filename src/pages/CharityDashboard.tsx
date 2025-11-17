@@ -42,7 +42,7 @@
 //     if (!text.trim()) { showToast('error','Please enter a message'); return; }
 //     try {
 //       const token = localStorage.getItem('token');
-//       const url = editingMessage ? `http://localhost:5100/api/charity/thank-you/${editingMessage._id}` : 'http://localhost:5100/api/charity/thank-you';
+//       const url = editingMessage ? `https://charityplatebe.vercel.app/api/charity/thank-you/${editingMessage._id}` : 'https://charityplatebe.vercel.app/api/charity/thank-you';
 //       const res = await fetch(url, { method: editingMessage ? 'PUT' : 'POST', headers: { 'Content-Type':'application/json', Authorization:`Bearer ${token}` }, body: JSON.stringify(editingMessage ? { message: text } : { donationId: selectedDonation?._id, userId: selectedDonation?.user?._id, message: text }) });
 //       if (res.ok) { showToast('success', editingMessage ? 'Message updated!' : 'Thank you sent!'); setThankYouOpen(false); setSelectedDonation(null); setEditingMessage(null); fetchSentMessages(); }
 //       else throw new Error('Failed');
@@ -55,7 +55,7 @@
 //     if (!messageToDelete) return;
 //     try {
 //       const token = localStorage.getItem('token');
-//       const res = await fetch(`http://localhost:5100/api/messages/${messageToDelete._id}`, { method: 'DELETE', headers: { Authorization: `Bearer ${token}` } });
+//       const res = await fetch(`https://charityplatebe.vercel.app/api/messages/${messageToDelete._id}`, { method: 'DELETE', headers: { Authorization: `Bearer ${token}` } });
 //       if (res.ok) { showToast('success','Deleted'); setDeleteOpen(false); setMessageToDelete(null); fetchSentMessages(); }
 //       else throw new Error('Failed');
 //     } catch { showToast('error','Failed to delete'); }

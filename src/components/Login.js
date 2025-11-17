@@ -86,7 +86,7 @@ const Login = () => {
 
     try {
       console.log("Login attempt", { email: formData.email });
-      const response = await fetch("http://localhost:5100/api/auth/login", {
+      const response = await fetch("https://charityplatebe.vercel.app/api/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),

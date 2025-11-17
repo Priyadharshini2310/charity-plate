@@ -168,7 +168,7 @@ const CharityDashboard = () => {
     try {
       const token = localStorage.getItem("token");
       const response = await fetch(
-        "http://localhost:5100/api/charity/profile",
+        "https://charityplatebe.vercel.app/api/charity/profile",
         {
           headers: { Authorization: `Bearer ${token}` },
         }
@@ -188,7 +188,7 @@ const CharityDashboard = () => {
     try {
       const token = localStorage.getItem("token");
       const response = await fetch(
-        "http://localhost:5100/api/charity/donations",
+        "https://charityplatebe.vercel.app/api/charity/donations",
         {
           headers: { Authorization: `Bearer ${token}` },
         }
@@ -209,7 +209,7 @@ const CharityDashboard = () => {
       const userId = user.id;
       
       const charityResponse = await fetch(
-        `http://localhost:5100/api/charity/byUser/${userId}`,
+        `https://charityplatebe.vercel.app/api/charity/byUser/${userId}`,
         {
           headers: { Authorization: `Bearer ${token}` },
         }
@@ -224,7 +224,7 @@ const CharityDashboard = () => {
       const charityId = charityData.data._id;
 
       const response = await fetch(
-        `http://localhost:5100/api/messages/sent/${charityId}`,
+        `https://charityplatebe.vercel.app/api/messages/sent/${charityId}`,
         {
           headers: { Authorization: `Bearer ${token}` },
         }
@@ -244,7 +244,7 @@ const CharityDashboard = () => {
   const fetchUserProfile = async () => {
     try {
       const token = localStorage.getItem("token");
-      const response = await fetch("http://localhost:5100/api/auth/me", {
+      const response = await fetch("https://charityplatebe.vercel.app/api/auth/me", {
         headers: { Authorization: `Bearer ${token}` },
       });
       const data = await response.json();
@@ -266,7 +266,7 @@ const CharityDashboard = () => {
     try {
       const token = localStorage.getItem("token");
       const response = await fetch(
-        "http://localhost:5100/api/charity/profile",
+        "https://charityplatebe.vercel.app/api/charity/profile",
         {
           method: "PUT",
           headers: {
@@ -312,7 +312,7 @@ const CharityDashboard = () => {
       }
 
       const response = await fetch(
-        "http://localhost:5100/api/auth/update-profile",
+        "https://charityplatebe.vercel.app/api/auth/update-profile",
         {
           method: "PUT",
           headers: {
@@ -357,8 +357,8 @@ const CharityDashboard = () => {
     try {
       const token = localStorage.getItem("token");
       const url = editingMessage
-        ? `http://localhost:5100/api/charity/thank-you/${editingMessage._id}`
-        : "http://localhost:5100/api/charity/thank-you";
+        ? `https://charityplatebe.vercel.app/api/charity/thank-you/${editingMessage._id}`
+        : "https://charityplatebe.vercel.app/api/charity/thank-you";
 
       const response = await fetch(url, {
         method: editingMessage ? "PUT" : "POST",
@@ -414,7 +414,7 @@ const CharityDashboard = () => {
     try {
       const token = localStorage.getItem("token");
       const response = await fetch(
-        `http://localhost:5100/api/messages/${messageToDelete._id}`,
+        `https://charityplatebe.vercel.app/api/messages/${messageToDelete._id}`,
         {
           method: "DELETE",
           headers: { Authorization: `Bearer ${token}` },

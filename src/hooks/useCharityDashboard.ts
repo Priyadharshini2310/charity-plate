@@ -25,7 +25,7 @@
 // const fetchCharity = async () => {
 // try {
 // const token = localStorage.getItem('token');
-// const res = await fetch('http://localhost:5100/api/charity/profile', { headers: { Authorization: `Bearer ${token}` } });
+// const res = await fetch('https://charityplatebe.vercel.app/api/charity/profile', { headers: { Authorization: `Bearer ${token}` } });
 // const data = await res.json();
 // if (res.ok) setCharityData(data);
 // } catch (e) {
@@ -37,5 +37,5 @@
 // const fetchDonations = async () => {
 // try {
 // const token = localStorage.getItem('token');
-// const res = await fetch('http://localhost:5100/api/charity/donations', { headers: { Authorization: `Bearer ${token}` } });
+// const res = await fetch('https://charityplatebe.vercel.app/api/charity/donations', { headers: { Authorization: `Bearer ${token}` } });
 // };

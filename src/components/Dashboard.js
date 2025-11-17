@@ -46,7 +46,7 @@ import {
 } from "recharts";
 import logoicon from '../images/LogoIcon.png'
 import logotext from '../images/NameLogo.png'
-const API_BASE_URL = "http://localhost:5100/api";
+const API_BASE_URL = "https://charityplatebe.vercel.app/api";
 const CAUTION_DEPOSIT_PER_PLATE = 20;
 
 const Dashboard = () => {

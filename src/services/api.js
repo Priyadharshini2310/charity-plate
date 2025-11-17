@@ -1,5 +1,5 @@
 // services/api.js
-const API_URL = 'http://localhost:5100/api';
+const API_URL = 'https://charityplatebe.vercel.app/api';
 
 // Enable debug mode - set to false in production
 const DEBUG_MODE = true;

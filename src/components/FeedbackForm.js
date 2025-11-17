@@ -3,7 +3,7 @@ import axios from 'axios';
 import { IoSend } from "react-icons/io5";
 import { IoCheckmarkCircle, IoCloseCircle } from "react-icons/io5";
 
-const API_URL = 'http://localhost:5100/api/feedback';
+const API_URL = 'https://charityplatebe.vercel.app/api/feedback';
 const MAX_MESSAGE_LENGTH = 250;
 
 const FeedbackForm = () => {
