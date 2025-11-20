@@ -98,17 +98,17 @@
 //       <h2 id="footer-heading" className="sr-only">
 //         Footer
 //       </h2>
-//       <div className="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
+//       <div className="px-6 pt-16 pb-8 mx-auto max-w-7xl sm:pt-24 lg:px-8 lg:pt-32">
 //         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
 //           {/* Brand Section */}
 //           <div className="space-y-8">
 //             <div className="flex items-center gap-2">
-//               <div className="flex h-14 w-14 items-center justify-center ">
-//                 <img src={logoicon} className="h-16 w-16 object-contain mb-6" />
+//               <div className="flex items-center justify-center h-14 w-14 ">
+//                 <img src={logoicon} className="object-contain w-16 h-16 mb-6" />
 //               </div>
 //               <img
 //                                   src={logotext}
-//                                   className="w-52 h-16 object-contain"
+//                                   className="object-contain h-16 w-52"
 //                                   alt="Name Logo"
 //                                 />
 //             </div>
@@ -120,17 +120,17 @@
 //                 <a
 //                   key={item.name}
 //                   href={item.href}
-//                   className="text-gray-400 hover:text-white transition-colors duration-200"
+//                   className="text-gray-400 transition-colors duration-200 hover:text-white"
 //                 >
 //                   <span className="sr-only">{item.name}</span>
-//                   <item.icon className="h-6 w-6" aria-hidden="true" />
+//                   <item.icon className="w-6 h-6" aria-hidden="true" />
 //                 </a>
 //               ))}
 //             </div>
 //           </div>
 
 //           {/* Links Section */}
-//           <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+//           <div className="grid grid-cols-2 gap-8 mt-16 xl:col-span-2 xl:mt-0">
 //             <div className="md:grid md:grid-cols-2 md:gap-8">
 //               <div>
 //                 <h3 className="text-sm font-semibold leading-6 text-white">
@@ -141,7 +141,7 @@
 //                     <li key={item.name}>
 //                       <a
 //                         href={item.href}
-//                         className="text-sm leading-6 text-gray-300 hover:text-white transition-colors duration-200"
+//                         className="text-sm leading-6 text-gray-300 transition-colors duration-200 hover:text-white"
 //                       >
 //                         {item.name}
 //                       </a>
@@ -158,7 +158,7 @@
 //                     <li key={item.name}>
 //                       <a
 //                         href={item.href}
-//                         className="text-sm leading-6 text-gray-300 hover:text-white transition-colors duration-200"
+//                         className="text-sm leading-6 text-gray-300 transition-colors duration-200 hover:text-white"
 //                       >
 //                         {item.name}
 //                       </a>
@@ -177,7 +177,7 @@
 //                     <li key={item.name}>
 //                       <a
 //                         href={item.href}
-//                         className="text-sm leading-6 text-gray-300 hover:text-white transition-colors duration-200"
+//                         className="text-sm leading-6 text-gray-300 transition-colors duration-200 hover:text-white"
 //                       >
 //                         {item.name}
 //                       </a>
@@ -194,7 +194,7 @@
 //                     <li key={item.name}>
 //                       <a
 //                         href={item.href}
-//                         className="text-sm leading-6 text-gray-300 hover:text-white transition-colors duration-200"
+//                         className="text-sm leading-6 text-gray-300 transition-colors duration-200 hover:text-white"
 //                       >
 //                         {item.name}
 //                       </a>
@@ -207,7 +207,7 @@
 //         </div>
 
 //         {/* Newsletter Section */}
-//         <div className="mt-16 border-t border-gray-700 pt-8 sm:mt-20 lg:mt-24">
+//         <div className="pt-8 mt-16 border-t border-gray-700 sm:mt-20 lg:mt-24">
 //           <div className="lg:grid lg:grid-cols-2 lg:gap-8">
 //             <div>
 //               <h3 className="text-sm font-semibold leading-6 text-white">
@@ -236,7 +236,7 @@
 //                 <button
 //                   type="button"
 //                   onClick={handleSubscribe}
-//                   className="flex w-full items-center justify-center rounded-md bg-gradient-to-r from-blue-600 to-indigo-600 px-3 py-3 mt-2 text-sm font-semibold text-white shadow-sm hover:from-blue-500 hover:to-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 transition-all duration-200"
+//                   className="flex items-center justify-center w-full px-3 py-3 mt-2 text-sm font-semibold text-white transition-all duration-200 rounded-md shadow-sm bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
 //                 >
 //                   Subscribe
 //                 </button>
@@ -246,15 +246,15 @@
 //         </div>
 
 //         {/* Bottom Section */}
-//         <div className="mt-8 border-t border-gray-700 pt-8 md:flex md:items-center md:justify-between">
+//         <div className="pt-8 mt-8 border-t border-gray-700 md:flex md:items-center md:justify-between">
 //           <div className="flex space-x-6 md:order-2">
-//             <a href="#" className="text-sm text-gray-400 hover:text-white transition-colors duration-200">
+//             <a href="#" className="text-sm text-gray-400 transition-colors duration-200 hover:text-white">
 //               Privacy Policy
 //             </a>
-//             <a href="#" className="text-sm text-gray-400 hover:text-white transition-colors duration-200">
+//             <a href="#" className="text-sm text-gray-400 transition-colors duration-200 hover:text-white">
 //               Terms of Service
 //             </a>
-//             <a href="#" className="text-sm text-gray-400 hover:text-white transition-colors duration-200">
+//             <a href="#" className="text-sm text-gray-400 transition-colors duration-200 hover:text-white">
 //               Cookie Settings
 //             </a>
 //           </div>
@@ -382,38 +382,38 @@ export default function Footer(): JSX.Element {
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
-      <div className="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
+      <div className="z-0 px-6 pt-16 pb-8 mx-auto max-w-7xl sm:pt-24 lg:px-8 lg:pt-32">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           {/* Brand Section */}
           <div className="space-y-8">
             <div className="flex items-center gap-2">
-              <div className="flex h-14 w-14 items-center justify-center ">
-                <img src={logoicon} className="h-16 w-16 object-contain mb-6" alt="Logo Icon" />
+              <div className="flex items-center justify-center h-14 w-14 ">
+                <img src={logoicon} className="object-contain w-16 h-16 mb-6" alt="Logo Icon" />
               </div>
-              <img src={logotext} className="w-52 h-16 object-contain" alt="Name Logo" />
+              <img src={logotext} className="object-contain h-16 w-52" alt="Name Logo" />
             </div>
             <p className="text-sm leading-6 text-gray-300">
               Connecting generous donors with verified charities to make a real difference in the world. Every donation counts, every cause matters.
             </p>
             <div className="flex space-x-6">
               {navigation.social.map((item) => (
-                <a key={item.name} href={item.href} className="text-gray-400 hover:text-white transition-colors duration-200" aria-label={item.name}>
+                <a key={item.name} href={item.href} className="text-gray-400 transition-colors duration-200 hover:text-white" aria-label={item.name}>
                   <span className="sr-only">{item.name}</span>
-                  <item.icon className="h-6 w-6" aria-hidden="true" />
+                  <item.icon className="w-6 h-6" aria-hidden="true" />
                 </a>
               ))}
             </div>
           </div>
 
           {/* Links Section */}
-          <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+          <div className="grid grid-cols-2 gap-8 mt-16 xl:col-span-2 xl:mt-0">
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
                 <h3 className="text-sm font-semibold leading-6 text-white">Platform</h3>
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.platform.map((item) => (
                     <li key={item.name}>
-                      <a href={item.href} className="text-sm leading-6 text-gray-300 hover:text-white transition-colors duration-200">
+                      <a href={item.href} className="text-sm leading-6 text-gray-300 transition-colors duration-200 hover:text-white">
                         {item.name}
                       </a>
                     </li>
@@ -425,7 +425,7 @@ export default function Footer(): JSX.Element {
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.company.map((item) => (
                     <li key={item.name}>
-                      <a href={item.href} className="text-sm leading-6 text-gray-300 hover:text-white transition-colors duration-200">
+                      <a href={item.href} className="text-sm leading-6 text-gray-300 transition-colors duration-200 hover:text-white">
                         {item.name}
                       </a>
                     </li>
@@ -439,7 +439,7 @@ export default function Footer(): JSX.Element {
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.forCharities.map((item) => (
                     <li key={item.name}>
-                      <a href={item.href} className="text-sm leading-6 text-gray-300 hover:text-white transition-colors duration-200">
+                      <a href={item.href} className="text-sm leading-6 text-gray-300 transition-colors duration-200 hover:text-white">
                         {item.name}
                       </a>
                     </li>
@@ -451,7 +451,7 @@ export default function Footer(): JSX.Element {
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.resources.map((item) => (
                     <li key={item.name}>
-                      <a href={item.href} className="text-sm leading-6 text-gray-300 hover:text-white transition-colors duration-200">
+                      <a href={item.href} className="text-sm leading-6 text-gray-300 transition-colors duration-200 hover:text-white">
                         {item.name}
                       </a>
                     </li>
@@ -463,7 +463,7 @@ export default function Footer(): JSX.Element {
         </div>
 
         {/* Newsletter Section */}
-        <div className="mt-16 border-t border-gray-700 pt-8 sm:mt-20 lg:mt-24">
+        <div className="pt-8 mt-16 border-t border-gray-700 sm:mt-20 lg:mt-24">
           <div className="lg:grid lg:grid-cols-2 lg:gap-8">
             <div>
               <h3 className="text-sm font-semibold leading-6 text-white">Subscribe to our newsletter</h3>
@@ -486,7 +486,7 @@ export default function Footer(): JSX.Element {
                 <button
                   type="button"
                   onClick={handleSubscribe}
-                  className="flex w-full items-center justify-center rounded-md bg-gradient-to-r from-blue-600 to-indigo-600 px-3 py-3 mt-2 text-sm font-semibold text-white shadow-sm hover:from-blue-500 hover:to-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 transition-all duration-200"
+                  className="flex items-center justify-center w-full px-3 py-3 mt-2 text-sm font-semibold text-white transition-all duration-200 rounded-md shadow-sm bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                 >
                   Subscribe
                 </button>
@@ -496,11 +496,11 @@ export default function Footer(): JSX.Element {
         </div>
 
         {/* Bottom Section */}
-        <div className="mt-8 border-t border-gray-700 pt-8 md:flex md:items-center md:justify-between">
+        <div className="pt-8 mt-8 border-t border-gray-700 md:flex md:items-center md:justify-between">
           <div className="flex space-x-6 md:order-2">
-            <a href="#" className="text-sm text-gray-400 hover:text-white transition-colors duration-200">Privacy Policy</a>
-            <a href="#" className="text-sm text-gray-400 hover:text-white transition-colors duration-200">Terms of Service</a>
-            <a href="#" className="text-sm text-gray-400 hover:text-white transition-colors duration-200">Cookie Settings</a>
+            <a href="#" className="text-sm text-gray-400 transition-colors duration-200 hover:text-white">Privacy Policy</a>
+            <a href="#" className="text-sm text-gray-400 transition-colors duration-200 hover:text-white">Terms of Service</a>
+            <a href="#" className="text-sm text-gray-400 transition-colors duration-200 hover:text-white">Cookie Settings</a>
           </div>
           <p className="mt-8 text-xs leading-5 text-gray-400 md:order-1 md:mt-0">&copy; 2025 CharityPlate, Inc. All rights reserved. Made with ❤️ for a better world.</p>
         </div>

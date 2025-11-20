@@ -100,7 +100,7 @@ const InfiniteMovingCards: React.FC<InfiniteMovingCardsProps> = ({
               <span className="relative z-20 text-sm leading-[1.6] text-gray-700 font-normal">
                 {item.quote}
               </span>
-              <div className="relative z-20 mt-6 flex flex-row items-center">
+              <div className="relative z-20 flex flex-row items-center mt-6">
                 <span className="flex flex-col gap-1">
                   <span className="text-sm leading-[1.6] text-gray-900 font-semibold">
                     {item.name}
@@ -172,10 +172,10 @@ export default function TestimonialsSection(): JSX.Element {
   ];
 
   return (
-    <section id="testimonials" className="bg-white py-24 sm:py-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 sm:text-5xl mb-4">
+    <section id="testimonials" className="py-24 bg-white backdrop-blur-sm sm:py-32">
+      <div className="px-6 mx-auto max-w-7xl lg:px-8">
+        <div className="max-w-2xl mx-auto mb-12 text-center">
+          <h2 className="mb-4 text-4xl font-bold text-gray-900 sm:text-5xl">
             WORDS FROM OUR COMMUNITY
           </h2>
           <p className="text-lg text-gray-600">What people are saying about us</p>
@@ -189,6 +189,6 @@ export default function TestimonialsSection(): JSX.Element {
           />
         </div>
       </div>
-    </section>
+    </section> 
   );
 }
