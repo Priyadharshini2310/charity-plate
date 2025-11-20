@@ -11,6 +11,8 @@
     "axios": "^1.12.2",
     "browser-image-compression": "^2.0.2",
     "clsx": "^2.1.1",
+    "html2canvas": "^1.4.1",
+    "jspdf": "^3.0.4",
     "lucide-react": "^0.544.0",
     "motion": "^12.23.12",
     "react": "^19.1.1",

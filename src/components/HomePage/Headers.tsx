@@ -2,9 +2,9 @@
 import React from 'react';
 import { IoHeart, IoCreate } from 'react-icons/io5';
 import { LogOut } from 'lucide-react';
-import logoicon from '../images/LogoIcon.png';
-import logotext from '../images/NameLogo.png';
-import { UserProfile } from '../types';
+import logoicon from '../../images/LogoIcon.png';
+import logotext from '../../images/NameLogo.png';
+import { UserProfile } from '../../types';
 
 export const Header: React.FC<{ userProfile: UserProfile | null; onLogout: () => void; onOpenProfile: () => void; onOpenOrg: () => void; }> = ({ userProfile, onLogout, onOpenProfile, onOpenOrg }) => {
   const [showProfileDropdown, setShowProfileDropdown] = React.useState(false);

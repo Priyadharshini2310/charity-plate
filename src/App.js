@@ -1,9 +1,8 @@
 
 import './App.css';
 import CharityDashboard from 'components/CharityDashboard';
-import Dashboard from './components/Dashboard';
-import FeedbackForm from './components/FeedbackForm';
-import LandingPage from './components/LandingPage';
+import Dashboard from './components/DonorDashboard/Dashboard';
+import LandingPage from './components/HomePage/LandingPage';
 import Login from './components/Login';
 import Signup from './components/Signup';
 import { BrowserRouter , Routes, Route, Navigate } from 'react-router-dom';
