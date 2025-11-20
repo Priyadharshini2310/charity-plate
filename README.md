@@ -1,70 +1,213 @@
-# Getting Started with Create React App
+# CharityPlate — Connecting Donors with Charities
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+CharityPlate is a platform designed to reduce food waste, support NGOs, and make donations easier.
+Donors can contribute food or money, while charities can receive, manage, and track donations in real time.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+### User Management
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* Email + OTP verification
+* Secure login & authentication (JWT)
+* Role-based access (`donor`, `charity`)
+* Password reset with email link
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Charity & Donation Features
 
-### `npm test`
+* Add and manage charity profiles
+* Upload charity images
+* Receive food or money donations
+* Track total donations and plates received
+* Display charity rating, reviews, and details
+* Search, filter, and sort charities
+* Distance-based listing (optional)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Search & Filtering
 
-### `npm run build`
+* Search charities by name
+* Filter by type:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  * `food`
+  * `money`
+  * `both`
+* Sort by:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  * rating
+  * distance
+  * price per plate
+  * recent updates
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Location & Geospatial Support
 
-### `npm run eject`
+* GeoJSON point structure
+* (Optional) distance-based search
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Frontend Dashboard
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* React + Tailwind + ShadCN UI
+* Donor dashboard
+* Charity dashboard
+* Fully responsive with modern UI
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Tech Stack
 
-## Learn More
+### Frontend
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* React / Next.js
+* TailwindCSS
+* ShadCN UI
+* Axios
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Backend
 
-### Code Splitting
+* Node.js
+* Express
+* Mongoose + MongoDB
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Authentication
 
-### Analyzing the Bundle Size
+* JWT
+* OTP via Nodemailer (Gmail SMTP)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Email Services
 
-### Making a Progressive Web App
+* Verification email
+* Welcome email
+* Password reset email
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## Project Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```
+CharityPlate/
+│── backend/
+│   ├── models/
+│   │   ├── User.js
+│   │   ├── Charity.js
+│   ├── controllers/
+│   │   ├── authController.js
+│   │   ├── charityController.js
+│   ├── routes/
+│   │   ├── authRoutes.js
+│   │   ├── charityRoutes.js
+│   ├── utils/
+│   │   ├── emailService.js
+│   ├── server.js
+│
+│── frontend/
+│   ├── src/
+│   │   ├── pages/
+│   │   ├── components/
+│   │   ├── api/
+│   ├── package.json
+│
+│── README.md
+│── .env
+```
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Environment Variables
 
-### `npm run build` fails to minify
+Create a `.env` file in the backend folder:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
+MONGO_URI=your_mongo_connection_string
+JWT_SECRET=yourSecretKey
+JWT_EXPIRE=1d
+
+EMAIL_USER=yourEmail@gmail.com
+EMAIL_PASSWORD=yourGmailAppPassword
+CLIENT_URL=http://localhost:3000
+```
+
+Use a Gmail app password instead of your real Gmail password.
+
+---
+
+## Running the Project
+
+### Backend
+
+```bash
+cd backend
+npm install
+npm start
+```
+
+Runs on: **[http://localhost:5000](http://localhost:5000)**
+
+### Frontend
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+Runs on: **[http://localhost:3000](http://localhost:3000)**
+
+---
+
+## API Endpoints (Summary)
+
+### Auth
+
+| Method | Endpoint                          | Description               |
+| ------ | --------------------------------- | ------------------------- |
+| POST   | `/api/auth/register`              | Register user + send OTP  |
+| POST   | `/api/auth/verify-otp`            | Verify email              |
+| POST   | `/api/auth/login`                 | Login                     |
+| POST   | `/api/auth/forgot-password`       | Send password reset email |
+| POST   | `/api/auth/reset-password/:token` | Reset password            |
+
+### Charities
+
+| Method | Endpoint           | Description                      |
+| ------ | ------------------ | -------------------------------- |
+| POST   | `/api/charity`     | Create a charity                 |
+| GET    | `/api/charity`     | Get all charities (with filters) |
+| GET    | `/api/charity/:id` | Get single charity               |
+| PUT    | `/api/charity/:id` | Update charity                   |
+| DELETE | `/api/charity/:id` | Disable charity                  |
+
+Filters Supported:
+
+* `?type=food | money | both`
+* `?sortBy=rating | distance | pricePerPlate`
+* `?search=name`
+
+---
+
+## Charity Schema (Overview)
+
+```js
+{
+  userId: ObjectId,
+  name: String,
+  address: String,
+  pricePerPlate: Number,
+  type: "food" | "money" | "both",
+  rating: Number,
+  reviews: String,
+  totalDonationsReceived: Number,
+  totalPlatesReceived: Number,
+  image: String,
+  isActive: Boolean
+}
+```
+
+---
+
+## Contributing
+
+Contributions are welcome.
+Feel free to open issues or submit pull requests.
+
+---
+
