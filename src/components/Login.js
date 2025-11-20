@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { IoCheckmarkCircle, IoCloseCircle } from "react-icons/io5";
 import logoicon from "../images/LogoIcon.png";
 import logotext from "../images/NameLogo.png";
+const API = process.env.REACT_APP_API_URL || "http://localhost:5100";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -86,14 +87,11 @@ const Login = () => {
 
     try {
       console.log("Login attempt", { email: formData.email });
-      const response = await fetch(
-        "https://charityplatebe.vercel.app/api/auth/login",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(formData),
-        }
-      );
+      const response = await fetch(`${API}/api/auth/login`, {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify(formData),
+});
 
       const data = await response.json();
       console.log("Login response", data);
@@ -175,6 +173,7 @@ const Login = () => {
               </div>
             </a>
           </div>
+
           <h2 className="text-3xl font-bold text-gray-900 mb-2">
             Welcome Back
           </h2>
@@ -182,9 +181,8 @@ const Login = () => {
             Sign in to continue making a difference
           </p>
         </div>
-
         <div
-          className="relative w-[380px] p-10 rounded-2xl
+          className="relative w-[380px] p-10 rounded-2xl items-center
   backdrop-blur-[15px]
   bg-white/10
   border border-white/40
@@ -311,7 +309,7 @@ const Login = () => {
                 <span className="ml-2 text-sm text-gray-600">Remember me</span>
               </label>
               <a
-                href="#"
+                href="/forgot-password"
                 className="text-sm text-indigo-600 hover:text-indigo-500 font-medium transition-colors"
               >
                 Forgot password?
