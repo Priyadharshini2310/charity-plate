@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { IoCheckmarkCircle, IoCloseCircle } from "react-icons/io5";
 import logoicon from "../images/LogoIcon.png";
 import logotext from "../images/NameLogo.png";
-const API = process.env.REACT_APP_API_URL || "http://localhost:5100";
+const API = process.env.REACT_APP_API_URL || "https://charityplatebe.vercel.app";
 
 const Login = () => {
   const navigate = useNavigate();
