@@ -108,7 +108,7 @@ export default function CharityPlateNavbar() {
               {/* Feedback Button */}
               <button
                 onClick={() => {
-                  
+                  window.location.href = "#feedback";
                 }}
                 className="flex items-center space-x-2 px-4 py-2.5  font-medium transition-all duration-200 bg-white  text-gray-700 hover:border-sky-600 hover:text-sky-600"
                 aria-label="Feedback"

@@ -292,9 +292,9 @@ export default function ImpactStatistics(): JSX.Element {
   const stats: StatItem[] = [
     {
       value: 10,
-      suffix: "M+",
+      suffix: "L+",
       label: "Total Funds Raised",
-      prefix: "$",
+      prefix: "₹",
       icon: <TbMoneybag className="text-yellow-500" />,
       gradient: "from-yellow-50 to-yellow-100",
     },

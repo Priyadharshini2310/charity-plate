@@ -4,7 +4,7 @@
 // import logoicon from "../images/LogoIcon.png";
 // import logotext from "../images/NameLogo.png";
 // import ParticlesComponent from "ui/particle";
-// const API = process.env.REACT_APP_API_URL || "http://localhost:5100";
+// const API = process.env.REACT_APP_API_URL || "https://charityplatebe.vercel.app";
 
 // const Login = () => {
 //   const navigate = useNavigate();
@@ -405,7 +405,7 @@ import logoicon from "../images/LogoIcon.png";
 import logotext from "../images/NameLogo.png";
 import ParticlesComponent from "ui/particle";
 
-const API = process.env.REACT_APP_API_URL || "http://localhost:5100";
+const API = process.env.REACT_APP_API_URL || "https://charityplatebe.vercel.app";
 
 const Login = () => {
   const navigate = useNavigate();

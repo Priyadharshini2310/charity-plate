@@ -1263,6 +1263,7 @@ import {
   IoCalendar,
   IoCash,
   IoDownload,
+  IoCard,
 } from "react-icons/io5";
 import {
   LineChart,
@@ -1823,6 +1824,17 @@ const CharityDashboard = () => {
                 </div>
               </div>
             </a>
+            <button
+  type="button"
+  onClick={() => {
+    const charityId = charityData?._id || JSON.parse(localStorage.getItem("user")).id;
+    window.open(`/charity/card/${charityId}`, '_blank');
+  }}
+  className="px-4 py-2 text-left hover:bg-sky-200 transition-colors flex items-center gap-2 rounded-lg"
+>
+  <IoCard className="w-4 h-4 text-sky-600" />
+  <span className="text-gray-700">View My Card</span>
+</button>
 
             <div className="flex items-center gap-4">
               

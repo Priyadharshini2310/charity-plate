@@ -117,10 +117,10 @@ const LandingPage: React.FC = () => {
       <main>
          
         {/* Hero Section */}
-        <div className="relative px-6 isolate pt-14 lg:px-8">
+        <div className="relative px-6 isolate pt-14 lg:px-8 backdrop-blur-sm">
            <div className="fixed inset-0 -z-10">
                 <ParticlesComponent id="particles-js" />
-                <div className="absolute inset-0 backdrop-blur-sm" />
+               
               </div>
           <div className="max-w-2xl py-32 mx-auto sm:py-48 lg:py-56">
             <div className="text-center">

@@ -165,7 +165,7 @@
 //   };
 
 //   return (
-//     <div className="flex items-center justify-center min-h-screen bg-white relative">
+//     <div className="relative flex items-center justify-center min-h-screen bg-white">
 //       {/* Toast Notification */}
 //       {toast.show && (
 //         <div className={`fixed top-6 right-6 z-50 flex items-center gap-3 px-6 py-4 rounded-xl shadow-2xl backdrop-blur-sm animate-slide-in ${
@@ -174,30 +174,30 @@
 //             : 'bg-red-500 text-white'
 //         }`}>
 //           {toast.type === 'success' ? (
-//             <IoCheckmarkCircle className="w-6 h-6 flex-shrink-0" />
+//             <IoCheckmarkCircle className="flex-shrink-0 w-6 h-6" />
 //           ) : (
-//             <IoCloseCircle className="w-6 h-6 flex-shrink-0" />
+//             <IoCloseCircle className="flex-shrink-0 w-6 h-6" />
 //           )}
 //           <p className="font-medium">{toast.message}</p>
 //         </div>
 //       )}
 
-//       <div className="w-full max-w-lg bg-white/80 backdrop-blur-sm rounded-2xl shadow-2xl border border-white/20 p-8 relative overflow-hidden">
+//       <div className="relative w-full max-w-lg p-8 overflow-hidden border shadow-2xl bg-white/80 backdrop-blur-sm rounded-2xl border-white/20">
 //         {/* Decorative background elements */}
-//         <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-sky-200/20 to-sky-200/20 rounded-full -translate-y-16 translate-x-16"></div>
-//         <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-sky-200/20 to-sky-200/20 rounded-full translate-y-12 -translate-x-12"></div>
+//         <div className="absolute top-0 right-0 w-32 h-32 translate-x-16 -translate-y-16 rounded-full bg-gradient-to-br from-sky-200/20 to-sky-200/20"></div>
+//         <div className="absolute bottom-0 left-0 w-24 h-24 -translate-x-12 translate-y-12 rounded-full bg-gradient-to-tr from-sky-200/20 to-sky-200/20"></div>
         
 //         <div className="relative z-10">
-//           <div className="text-center mb-8">
-//             <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-sky-500 to-sky-600 rounded-full mb-4">
+//           <div className="mb-8 text-center">
+//             <div className="inline-flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-gradient-to-r from-sky-500 to-sky-600">
 //               <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 //                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
 //               </svg>
 //             </div>
-//             <h2 className="text-3xl font-bold bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent mb-2">
+//             <h2 className="mb-2 text-3xl font-bold text-transparent bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text">
 //               Your Feedback Matters
 //             </h2>
-//             <p className="text-gray-600 tracking-tighter">
+//             <p className="tracking-tighter text-gray-600">
 //               Help us improve our service by sharing your valuable thoughts with us.
 //             </p>
 //           </div>
@@ -287,7 +287,7 @@
 
 //             {/* Rating Field */}
 //             <div>
-//               <div className="flex items-center justify-center space-x-2 p-4 bg-gray-50/50 rounded-xl border-2 border-gray-200">
+//               <div className="flex items-center justify-center p-4 space-x-2 border-2 border-gray-200 bg-gray-50/50 rounded-xl">
 //                 {[1, 2, 3, 4, 5].map((star) => (
 //                   <button
 //                     key={star}
@@ -303,7 +303,7 @@
 //                   </button>
 //                 ))}
 //               </div>
-//               <p className="text-xs text-gray-500 text-center mt-2">
+//               <p className="mt-2 text-xs text-center text-gray-500">
 //                 {formData.rating === 1 && "Poor"}
 //                 {formData.rating === 2 && "Fair"}
 //                 {formData.rating === 3 && "Good"}
@@ -332,7 +332,7 @@
 //               </div>
 //               <div className="flex justify-between items-center mt-1.5">
 //                 {errors.message && touched.message ? (
-//                   <p className="text-sm text-red-600 flex items-center gap-1">
+//                   <p className="flex items-center gap-1 text-sm text-red-600">
 //                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
 //                       <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd"></path>
 //                     </svg>
@@ -359,7 +359,7 @@
 //             >
 //               {isSubmitting ? (
 //                 <>
-//                   <svg className="animate-spin w-5 h-5" fill="none" viewBox="0 0 24 24">
+//                   <svg className="w-5 h-5 animate-spin" fill="none" viewBox="0 0 24 24">
 //                     <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
 //                     <path className="opacity-75" fill="currentColor" d="m4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
 //                   </svg>
@@ -560,7 +560,7 @@ const FeedBack: React.FC = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-white relative">
+    <div id='feedback' className=" relative flex items-center justify-center min-h-screen bg-white">
       {/* Toast Notification */}
       {toast.show && (
         <div
@@ -569,28 +569,28 @@ const FeedBack: React.FC = () => {
           }`}
         >
           {toast.type === 'success' ? (
-            <IoCheckmarkCircle className="w-6 h-6 flex-shrink-0" />
+            <IoCheckmarkCircle className="flex-shrink-0 w-6 h-6" />
           ) : (
-            <IoCloseCircle className="w-6 h-6 flex-shrink-0" />
+            <IoCloseCircle className="flex-shrink-0 w-6 h-6" />
           )}
           <p className="font-medium">{toast.message}</p>
         </div>
       )}
 
-      <div className="w-full max-w-lg bg-white/80 backdrop-blur-sm rounded-2xl shadow-2xl border border-white/20 p-8 relative overflow-hidden">
+      <div className="relative w-full max-w-lg p-8 overflow-hidden border shadow-2xl bg-white/80 backdrop-blur-sm rounded-2xl border-white/20">
         {/* Decorative background elements */}
-        <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-sky-200/20 to-sky-200/20 rounded-full -translate-y-16 translate-x-16"></div>
-        <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-sky-200/20 to-sky-200/20 rounded-full translate-y-12 -translate-x-12"></div>
+        <div className="absolute top-0 right-0 w-32 h-32 translate-x-16 -translate-y-16 rounded-full bg-gradient-to-br from-sky-200/20 to-sky-200/20"></div>
+        <div className="absolute bottom-0 left-0 w-24 h-24 -translate-x-12 translate-y-12 rounded-full bg-gradient-to-tr from-sky-200/20 to-sky-200/20"></div>
 
         <div className="relative z-10">
-          <div className="text-center mb-8">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-sky-500 to-sky-600 rounded-full mb-4">
+          <div className="mb-8 text-center">
+            <div className="inline-flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-gradient-to-r from-sky-500 to-sky-600">
               <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
               </svg>
             </div>
-            <h2 className="text-3xl font-bold bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent mb-2">Your Feedback Matters</h2>
-            <p className="text-gray-600 tracking-tighter">Help us improve our service by sharing your valuable thoughts with us.</p>
+            <h2 className="mb-2 text-3xl font-bold text-transparent bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text">Your Feedback Matters</h2>
+            <p className="tracking-tighter text-gray-600">Help us improve our service by sharing your valuable thoughts with us.</p>
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-6">
@@ -674,7 +674,7 @@ const FeedBack: React.FC = () => {
 
             {/* Rating Field */}
             <div>
-              <div className="flex items-center justify-center space-x-2 p-4 bg-gray-50/50 rounded-xl border-2 border-gray-200">
+              <div className="flex items-center justify-center p-4 space-x-2 border-2 border-gray-200 bg-gray-50/50 rounded-xl">
                 {[1, 2, 3, 4, 5].map((star) => (
                   <button
                     key={star}
@@ -688,7 +688,7 @@ const FeedBack: React.FC = () => {
                   </button>
                 ))}
               </div>
-              <p className="text-xs text-gray-500 text-center mt-2">
+              <p className="mt-2 text-xs text-center text-gray-500">
                 {formData.rating === 1 && 'Poor'}
                 {formData.rating === 2 && 'Fair'}
                 {formData.rating === 3 && 'Good'}
@@ -715,7 +715,7 @@ const FeedBack: React.FC = () => {
               </div>
               <div className="flex justify-between items-center mt-1.5">
                 {errors.message && touched.message ? (
-                  <p className="text-sm text-red-600 flex items-center gap-1">
+                  <p className="flex items-center gap-1 text-sm text-red-600">
                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd"></path>
                     </svg>
@@ -740,7 +740,7 @@ const FeedBack: React.FC = () => {
             >
               {isSubmitting ? (
                 <>
-                  <svg className="animate-spin w-5 h-5" fill="none" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 animate-spin" fill="none" viewBox="0 0 24 24">
                     <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                     <path className="opacity-75" fill="currentColor" d="m4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                   </svg>

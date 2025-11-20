@@ -8,6 +8,8 @@ import Signup from './components/Signup';
 import { BrowserRouter , Routes, Route, Navigate } from 'react-router-dom';
 import ForgotPassword from 'components/ForgotPassword';
 import ResetPassword from 'components/ResetPassword';
+import CharityCard from 'components/CharityCard';
+import PublicCharityCard from 'components/CharityCard';
 function App() {
   return (
     <BrowserRouter>
@@ -17,6 +19,7 @@ function App() {
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/reset-password" element={<ResetPassword />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/charity/card/:charityId" element={<PublicCharityCard />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/charity-dashboard" element={<CharityDashboard />} />
         <Route path="*" element={<Navigate to="/" />} />
